@@ -1,0 +1,125 @@
+/* Dark Theme for Schedules */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f0f10; /* Dark background */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header-nav {
+    margin-bottom: 20px;
+}
+.btn-back {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.btn-back:hover { 
+    color: white; 
+}
+
+.movie-header-section {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: center;
+}
+.movie-poster-large {
+    width: 200px;
+    height: 300px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.movie-details-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.movie-meta {
+    color: #ff3b3b; /* Red accent */
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.section-title span {
+    color: #ff3b3b;
+}
+
+/* Schedule Grid */
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.schedule-card {
+    background: #1a1a1c;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.schedule-card:hover {
+    border-color: #ff3b3b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 59, 59, 0.2);
+}
+
+.time-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ff3b3b;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.location-row, .format-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+.seats-row {
+    margin-top: auto;
+    color: #ffcc00; /* Yellow for seats */
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Icons */
+.icon { width: 20px; text-align: center; }
+
+@media (max-width: 768px) {
+    .movie-header-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .movie-details-header h1 {
+        font-size: 2rem;
+    }
+}
